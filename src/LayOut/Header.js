@@ -44,12 +44,12 @@ const Header = () => {
                         ) : (
                             <>
                             <NavItem>
-                                <NavLink  tag={Link} to="/" className="text-white text-decoration-none">
+                                <NavLink  tag={Link} to="/signup" className="text-white text-decoration-none">
                                     SignUp
                                     </NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink  tag={Link} to="/" className="text-white text-decoration-none">
+                                <NavLink  tag={Link} to="/signin" className="text-white text-decoration-none">
                                     SignIn
                                 </NavLink>
                             </NavItem>
