@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/React-firebase-mygitapp/static/css/main.41188697.css",
+    "main.js": "/React-firebase-mygitapp/static/js/main.ccf8ae01.js",
+    "static/js/787.d103c22b.chunk.js": "/React-firebase-mygitapp/static/js/787.d103c22b.chunk.js",
+    "index.html": "/React-firebase-mygitapp/index.html",
+    "main.41188697.css.map": "/React-firebase-mygitapp/static/css/main.41188697.css.map",
+    "main.ccf8ae01.js.map": "/React-firebase-mygitapp/static/js/main.ccf8ae01.js.map",
+    "787.d103c22b.chunk.js.map": "/React-firebase-mygitapp/static/js/787.d103c22b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.41188697.css",
+    "static/js/main.ccf8ae01.js"
+  ]
+}
