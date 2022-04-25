@@ -25,7 +25,7 @@ const Header = () => {
         <Navbar color="info" light expand="md">
             <NavbarBrand>
                 <Link to="/" className="text-white text-decoration-none">
-                    Auth App
+                    Git App
                 </Link>
             </NavbarBrand>
             <NavbarText className="text-white">{
