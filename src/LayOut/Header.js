@@ -37,7 +37,9 @@ const Header = () => {
                     {
                         context.user ? (
                             <NavItem>
-                                <NavLink tag={Link} to="/" className="text-white text-decoration-none">
+                                <NavLink onClick={()=>{
+                                    context.setUser(null);
+                                }} className="text-white text-decoration-none">
                                     LogOut
                                 </NavLink>
                             </NavItem>
