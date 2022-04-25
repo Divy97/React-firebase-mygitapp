@@ -11,33 +11,51 @@ import {
 } from "reactstrap";
 
 import {Link} from "react-router-dom";
-import UserContext from "../Context/UserContext"
+import {UserContext} from "../Context/UserContext"
 const Header = () => {
+
+    const context = useContext(UserContext);
+
+    const [isOpen, setIsOpen] = useState(); 
+
+    const toggle = () => {
+        setIsOpen(!isOpen);
+    }
     return(
         <Navbar color="info" light expand="md">
             <NavbarBrand>
                 <Link to="/" className="text-white text-decoration-none">
-                    Divy GitFire App
+                    Auth App
                 </Link>
             </NavbarBrand>
-            <NavbarToggler />
-            <Collapse navbar>
+            <NavbarText className="text-white">{
+                context.user?.email ? context.user.email : " "
+            }</NavbarText>
+            <NavbarToggler onClick={toggle}/>
+            <Collapse isOpen={isOpen} navbar>
                 <Nav style={{ marginLeft: "auto" }} navbar>
-                    <NavItem>
-                        <NavLink className="text-white text-decoration-none">
-                            SignUp
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink className="text-white text-decoration-none">
-                            SignIn
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink className="text-white text-decoration-none">
-                            LogOut
-                        </NavLink>
-                    </NavItem>
+                    {
+                        context.user ? (
+                            <NavItem>
+                                <NavLink tag={Link} to="/" className="text-white text-decoration-none">
+                                    LogOut
+                                </NavLink>
+                            </NavItem>
+                        ) : (
+                            <>
+                            <NavItem>
+                                <NavLink  tag={Link} to="/" className="text-white text-decoration-none">
+                                    SignUp
+                                    </NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink  tag={Link} to="/" className="text-white text-decoration-none">
+                                    SignIn
+                                </NavLink>
+                            </NavItem>
+                            </>
+                        )
+                    }
                 </Nav>
             </Collapse>
         </Navbar>   

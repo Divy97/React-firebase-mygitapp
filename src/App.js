@@ -26,6 +26,10 @@ import NotFound from "./Pages/NotFound";
 import Footer from "./LayOut/Footer"
 import {UserContext} from "./Context/UserContext";
 import Header from './LayOut/Header';
+
+import FireBaseConfig from "./Config/FireBaseConfig";
+// init firebase
+firebase.initializeApp(FireBaseConfig);
 const App = () => {
 
   const [user, setUser] = useState(null);
